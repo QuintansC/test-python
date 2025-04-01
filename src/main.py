@@ -1,4 +1,4 @@
-from src.read import managementPDF, alterarCSV
+from src.manipulate import managementPDF, alterarCSV, zipArchivesDocs, zipArchivesCSV
 from src.webscrapping import scrapp
 import os.path
 
@@ -12,3 +12,10 @@ if not os.path.isfile('./output/anexoI.csv'):
 
 if os.path.isfile('./output/anexoI.csv'):
     alterarCSV('./output/anexoI.csv')
+
+if not os.path.isfile('./docs/ArquivoUnico.zip'):
+    zipArchivesDocs()
+
+if not os.path.isfile('./output/Teste_GustavoQuintans.csv'):
+    zipArchivesCSV()
+
